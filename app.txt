@@ -1,0 +1,14 @@
+import logging;logging.basicConfig(level=logging.INFO)
+
+import asynico,os,json,time
+
+from aiohttp import web
+
+from datatime import datatime
+
+def index(request):
+	return web.Response(body=b'<h1>Hello world/<h1>')
+	
+@asyncio.coroutine
+def init(loop):
+	app=web.Application(loop=loop)
